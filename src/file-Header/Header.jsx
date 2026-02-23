@@ -7,6 +7,11 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { NavLink } from "react-router-dom";
 
 function Header() {
+
+
+  
+  
+  
   return (
     <div className="header">
       <NavLink to="/bookmark">Bookmarks</NavLink>
