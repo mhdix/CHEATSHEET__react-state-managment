@@ -6,11 +6,12 @@ import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
-import { createSearchParams, useNavigate } from "react-router-dom";
+import { createSearchParams, useNavigate, useSearchParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
 const Header = () => {
-  const [destination, setDestination] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams()
+  const [destination, setDestination] = useState(searchParams.get("destination"));
   const [openOptions, setOpenOptions] = useState(false);
   const [options, setOptions] = useState({
     adult: 1,
